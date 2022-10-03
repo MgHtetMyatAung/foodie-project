@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap');
+
+$primary: #399653;
+
+$font-family-sans-serif : 'Montserrat', sans-serif;
+$navbar-nav-link-padding-x: 1.5rem;
+
+$btn-font-size: .75rem;
+$btn-padding-x: 1rem;
+$btn-padding-y: .75rem;
+
+$btn-font-size-lg: 1rem;
+$btn-padding-x-lg: 1.75rem;
+$btn-padding-y-lg: .75rem;
+
+$border-radius: .5rem;
+$border-radius-lg: .75rem;
+
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'bootstrap/scss/bootstrap';
+@import 'animate.css/animate.min.css';
+
+.nav-link{
+  transition: transform .5s;
+}
+
+.nav-link.active{
+  color: white !important;
+}
+
+.menu:hover{
+  color: white !important;
+}
+
+.brand-icon{
+  height: 40px;
+  transition: 2s;
+}
+
+.toTop{
+  transform: translateY(-100px);
+}
+
+.site-navbar{
+  z-index: 1000;
+  &:hover .brand-icon{
+    transform: rotate(360deg);
+  }
+
+  &:hover .nav-link.active{
+    transform: translateY(-3px);
+  }
+}
+
+.service{
+  text-align: center;
+
+  svg{
+    fill: $primary;
+  }
+}
+
+.plate{
+  transition: 0.2s;
+}
+
+.plate img{
+  transition: 1s;
+}
+
+.plate:hover{
+  transform: translateY(-10px);
+  box-shadow: $box-shadow;
+
+  img{
+    transform: rotate(30deg);
+  }
+}
+
+#toTop{
+  cursor: pointer;
+}
+
+.top-icon{
+  animation: jupm 1s infinite;
+}
+
+@keyframes jupm {
+  from{
+    transform: translateY(-10px);
+  }
+
+  to{
+    transform: translateY(0px);
+  }
+}
